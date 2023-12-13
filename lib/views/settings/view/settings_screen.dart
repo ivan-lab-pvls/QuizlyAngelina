@@ -34,6 +34,7 @@ class SettingsScreen extends StatelessWidget {
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             SizedBox(
               height: size.height * 0.2,
@@ -47,21 +48,29 @@ class SettingsScreen extends StatelessWidget {
                             res:
                                 'https://docs.google.com/document/d/1bp_SWJImS5hP9RR9Ndoyaf8-6QCx9OoZo5_SvwTfsU0/edit?usp=sharing')));
               },
-              child: ListTile(
-                title: TextButton.icon(
-                    onPressed: () {},
-                    style: const ButtonStyle(alignment: Alignment.centerLeft),
-                    icon: SvgPicture.asset(
-                      'assets/icons/tick_square.svg',
-                      width: 26,
-                      height: 26,
-                      color: AppColors.lightBlueColor,
-                    ),
-                    label: Text(
-                      'Privacy Policy',
-                      style: OnboardingTextStyle.introduction,
-                    )),
+              child: Row(
+                children: [
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  SvgPicture.asset(
+                    'assets/icons/tick_square.svg',
+                    width: 26,
+                    height: 26,
+                    color: AppColors.lightBlueColor,
+                  ),
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  Text(
+                    'Privacy Policy',
+                    style: OnboardingTextStyle.introduction,
+                  ),
+                ],
               ),
+            ),
+            const SizedBox(
+              height: 30,
             ),
             InkWell(
               onTap: () {
@@ -72,21 +81,29 @@ class SettingsScreen extends StatelessWidget {
                             res:
                                 'https://docs.google.com/document/d/1gkag2splOz27uwoi-4ldZ-i6nbGHZ1i9_aVzCX_88Io/edit?usp=sharing')));
               },
-              child: ListTile(
-                title: TextButton.icon(
-                    onPressed: () {},
-                    style: const ButtonStyle(alignment: Alignment.centerLeft),
-                    icon: SvgPicture.asset(
-                      'assets/icons/chat.svg',
-                      width: 26,
-                      height: 26,
-                      color: AppColors.lightBlueColor,
-                    ),
-                    label: const Text(
-                      'Terms of use',
-                      style: OnboardingTextStyle.introduction,
-                    )),
+              child: Row(
+                children: [
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  SvgPicture.asset(
+                    'assets/icons/chat.svg',
+                    width: 26,
+                    height: 26,
+                    color: AppColors.lightBlueColor,
+                  ),
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  const Text(
+                    'Terms of use',
+                    style: OnboardingTextStyle.introduction,
+                  )
+                ],
               ),
+            ),
+            const SizedBox(
+              height: 30,
             ),
             InkWell(
               onTap: () {
@@ -94,20 +111,25 @@ class SettingsScreen extends StatelessWidget {
                   appStoreId: '6474238194',
                 );
               },
-              child: ListTile(
-                title: TextButton.icon(
-                    onPressed: () {},
-                    style: const ButtonStyle(alignment: Alignment.centerLeft),
-                    icon: SvgPicture.asset(
-                      'assets/icons/star.svg',
-                      width: 26,
-                      height: 26,
-                      color: AppColors.lightBlueColor,
-                    ),
-                    label: Text(
-                      'Rate app',
-                      style: OnboardingTextStyle.introduction,
-                    )),
+              child: Row(
+                children: [
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  SvgPicture.asset(
+                    'assets/icons/star.svg',
+                    width: 26,
+                    height: 26,
+                    color: AppColors.lightBlueColor,
+                  ),
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  Text(
+                    'Rate app',
+                    style: OnboardingTextStyle.introduction,
+                  )
+                ],
               ),
             )
           ],
